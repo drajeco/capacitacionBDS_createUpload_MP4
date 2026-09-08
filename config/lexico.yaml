@@ -1,0 +1,23 @@
+# Cómo debe leer el motor de voz ciertas siglas y términos.
+# Se aplica justo antes de sintetizar; el guion no se modifica.
+#
+# siglas:   se reemplazan respetando mayúsculas y solo como palabra completa.
+# terminos: se reemplazan sin distinguir mayúsculas (útil para inglés).
+
+siglas:
+  LCR: ele-ce-erre
+  FNE: efe-ene-e
+  EMO: EMO
+  BCRA: be-ce-erre-a
+  PIB: pib
+  ROE: ROE
+  ROA: ROA
+
+terminos:
+  cash flow: cash flou
+  spread: espred
+  default: defolt
+  leasing: lísing
+  factoring: fáctoring
+  compliance: compláians
+  trade finance: treid fáinans

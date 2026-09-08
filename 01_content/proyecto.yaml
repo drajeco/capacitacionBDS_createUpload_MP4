@@ -1,0 +1,81 @@
+# Configuración de ESTE video. Cada carpeta de contenido tiene la suya.
+# Todo lo que no esté acá toma el valor por defecto de comun/config.py.
+
+proyecto:
+  nombre: intermediacion_bancaria
+  titulo: Intermediación bancaria
+  idioma: es-AR
+
+insumos:
+  slides: 01_materialOriginal/slides
+  transcripcion: 01_materialOriginal/exposicion
+  fichas: 01_materialOriginal/fichas_lectura
+
+salidas:
+  guion: 02_archivosIntermedios/guion/guion_maestro.md
+  slides: 02_archivosIntermedios/slides
+  textos: 02_archivosIntermedios/text_files
+  audios: 02_archivosIntermedios/audio_files
+  segmentos: 02_archivosIntermedios/video_segmentos
+  video: 03_output/video_final.mp4
+  qc: 03_output/qc
+
+guion:
+  modelo: gpt-5.4
+  esfuerzo: high
+  max_output_tokens: 32000
+  duracion_objetivo_min: 18
+  # Cuántos segmentos de narración pedirle como máximo a cada diapositiva.
+  # Con 6 slides densas conviene subdividir para que la imagen no quede fija
+  # cuatro o cinco minutos.
+  max_segmentos_por_slide: 4
+  palabras_por_segmento: 220
+  # El primer segmento de cada diapositiva abre con una frase de transición
+  # propia (no el título leído literal). Los sub-segmentos b, c... no la llevan.
+  transicion_titulo: true
+  reglas: |
+    1. Escribir material independiente y autocontenido: quien mira el video no
+       asistió a ninguna clase ni leyó nada previo.
+    2. Preservar los conceptos, los ejemplos reales y el orden lógico de la
+       exposición original.
+    3. No transcribir literalmente el habla: eliminar muletillas, repeticiones,
+       interrupciones y frases incompletas.
+    4. No mencionar reuniones, clases, lecciones, ni contenido anterior o
+       posterior. Nada de "como vimos", "la clase pasada", "más adelante".
+    5. No interpelar al público presente ("¿saben?", "miren acá", "¿se
+       entiende?"). Nada que dependa de que alguien haya participado antes.
+    6. Oraciones naturales y de extensión moderada, aptas para voz sintética.
+       Evitar subordinadas encadenadas y paréntesis largos.
+    7. Explicar cada sigla la primera vez que aparece, escribiéndola normal
+       (LCR, no ele-ce-erre): la pronunciación se corrige después.
+    8. Una unidad conceptual por segmento. El texto de cada segmento tiene que
+       corresponder con lo que la diapositiva muestra en pantalla.
+    9. Evitar instrucciones visuales dentro de la locución.
+    10. Registro didáctico, en español rioplatense neutro, sin voseo marcado.
+
+audio:
+  proveedor: edge          # edge | openai | existente
+  voz: es-AR-TomasNeural
+  velocidad: "+0%"
+  formato: mp3
+  concurrencia: 4
+  lexico: config/lexico.yaml
+  # Silencio real al principio del audio del primer segmento de cada
+  # diapositiva, para que se note el cambio de imagen. 0 lo desactiva.
+  pausa_inicial_seg: 0.7
+
+video:
+  ancho: 1920
+  alto: 1080
+  fps: 30
+  codec_video: libx264
+  codec_audio: aac
+  bitrate_audio: 192k
+  crf: 20
+  movimiento: ninguno      # ninguno | kenburns
+  umbral_movimiento_seg: 90
+
+qc:
+  min_seg: 5
+  max_seg: 300
+  capturas: 8

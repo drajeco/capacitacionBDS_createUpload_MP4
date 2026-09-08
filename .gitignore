@@ -1,0 +1,17 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Artefactos regenerables del pipeline
+*/02_archivosIntermedios/slides/
+*/02_archivosIntermedios/audio_files/
+*/02_archivosIntermedios/video_segmentos/
+*/03_output/
+
+# Material original de cada video (se respalda por fuera de git, ej. OneDrive)
+*/01_materialOriginal/
+
+# Artefactos de sesión de Claude Code (no del proyecto)
+.claude/*.lock
