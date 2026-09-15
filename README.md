@@ -4,6 +4,21 @@ Pipeline para convertir material educativo (presentación + transcripción de cl
 en un video MP4 listo para YouTube, con locución sintética sincronizada con las
 diapositivas.
 
+Sesión de Claude Code activa (2026-09-14): https://claude.ai/code/session_01F93nGB8Ry8AxuWQi92ixRH
+
+### Cómo recuperar esa sesión
+
+Ese `session_...` es un ID de sesión **web/cloud** de Claude Code (el formato que
+usan los links `claude.ai/code/...`), no un UUID de sesión local de la CLI —
+`claude --resume <ese-id>` falla porque no coinciden los formatos. Para
+retomarla:
+
+- **Desde el navegador:** abrí el link de arriba directamente.
+- **Desde la CLI, una sesión local de este proyecto** (que es otra cosa): corré
+  `claude --resume` sin argumentos en una terminal normal (no con `!` dentro de
+  una sesión de Claude Code, porque ese modo no es interactivo) y elegí de la
+  lista. Ahí los IDs son UUIDs, no `session_...`.
+
 ## Cómo funciona
 
 Siete scripts numerados que se corren en orden. Cada uno es independiente,
@@ -21,6 +36,8 @@ reejecutable, y salta lo que ya está hecho salvo que se le pase `--forzar`.
 ```
 
 `correr_pipeline.py` los encadena y se detiene solo en la parada del guion.
+`limpiar_proyecto.py` borra `02_archivosIntermedios/` y `03_output/` (los
+artefactos regenerables) para empezar de cero, sin tocar el material original.
 
 ## Instalación (una vez)
 
@@ -54,7 +71,58 @@ O todo de una:
 ```bash
 python correr_pipeline.py --proyecto 01_content            # se detiene tras el guion
 python correr_pipeline.py --proyecto 01_content --desde 03 # continuar tras aprobarlo
+python correr_pipeline.py --proyecto 01_content --limpiar  # empezar de cero
 ```
+
+Para vaciar un proyecto sin correr nada más:
+
+```bash
+python limpiar_proyecto.py --proyecto 01_content
+```
+
+## Como correr desde la terminal el pipeline completo
+
+Esto no requiere Claude Code: es una terminal normal (Terminal.app, iTerm, la
+integrada de VS Code, etc.).
+
+1. Abrir una terminal y pararse en la carpeta del proyecto:
+
+   ```bash
+   cd "/Users/diegoabal/Library/CloudStorage/OneDrive-Personal/Documents/03 - Desarrollo/Cursos/Datascience/02 - Diplomatura (UP)/04 - PROYECTOS/09 - mp4_creation"
+   ```
+
+2. Verificar que `.env` tenga la clave real de OpenAI (`OPENAI_API_KEY=sk-...`)
+   y que las dependencias estén instaladas (`pip install -r requirements.txt`).
+
+3. Arrancar el pipeline desde cero, borrando cualquier artefacto regenerable
+   previo:
+
+   ```bash
+   python correr_pipeline.py --proyecto 01_content --limpiar
+   ```
+
+   Esto corre en orden `00_validar_insumos.py` → `01_preparar_slides.py` →
+   `02_escribir_guion.py`, y se **detiene automáticamente** ahí: el guion hay
+   que revisarlo a mano antes de convertirlo en voz.
+
+4. Revisar y, si hace falta, editar
+   `01_content/02_archivosIntermedios/guion/guion_maestro.md`. Ese archivo en
+   disco es la fuente de verdad — lo que se sintetiza es lo que quede ahí
+   escrito.
+
+5. Una vez aprobado el guion, continuar con el resto del pipeline:
+
+   ```bash
+   python correr_pipeline.py --proyecto 01_content --desde 03
+   ```
+
+   Esto corre `03_dividir_guion.py` → `04_crear_audios.py` →
+   `05_montar_video.py` → `06_control_calidad.py` sin detenerse, hasta dejar
+   listo `01_content/03_output/video_final.mp4`.
+
+Si en el paso 3 no se quiere borrar nada (por ejemplo, para reintentar sin
+empezar de cero), se omite `--limpiar`; cada script individual ya salta lo que
+esté hecho salvo que se le pase `--forzar`.
 
 ## Un video nuevo
 
