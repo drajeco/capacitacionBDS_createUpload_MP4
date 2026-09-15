@@ -51,18 +51,22 @@ guion:
     8. Una unidad conceptual por segmento. El texto de cada segmento tiene que
        corresponder con lo que la diapositiva muestra en pantalla.
     9. Evitar instrucciones visuales dentro de la locución.
-    10. Registro didáctico, en español rioplatense neutro, sin voseo marcado.
+    10. Registro profesional y serio, propio de un material de capacitación: en
+        español rioplatense neutro, sin voseo marcado. Mantené la espontaneidad y
+        el hilo natural de la exposición oral — no tiene que sonar acartonado ni
+        a libro leído — pero sin caer en informalidades, muletillas o
+        desprolijidad: es contenido de formación, no una charla entre colegas.
 
 audio:
   proveedor: edge          # edge | openai | existente
-  voz: es-AR-TomasNeural
+  voz: es-UY-ValentinaNeural
   velocidad: "+0%"
   formato: mp3
   concurrencia: 4
   lexico: config/lexico.yaml
   # Silencio real al principio del audio del primer segmento de cada
   # diapositiva, para que se note el cambio de imagen. 0 lo desactiva.
-  pausa_inicial_seg: 0.7
+  pausa_inicial_seg: 1
 
 video:
   ancho: 1920

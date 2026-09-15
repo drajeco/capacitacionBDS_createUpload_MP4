@@ -4,6 +4,7 @@
     python correr_pipeline.py --proyecto 01_content
     python correr_pipeline.py --proyecto 01_content --desde 04
     python correr_pipeline.py --proyecto 01_content --sin-parada
+    python correr_pipeline.py --proyecto 01_content --limpiar
 
 Cada paso también se puede correr suelto; esto solo los encadena.
 """
@@ -39,12 +40,23 @@ def main() -> int:
     p.add_argument("--forzar", action="store_true")
     p.add_argument("--sin-parada", action="store_true",
                    help="no se detiene tras el guion (solo si ya lo revisaste)")
+    p.add_argument("--limpiar", action="store_true",
+                   help="borra 02_archivosIntermedios/ y 03_output/ antes de arrancar (empezar de cero)")
     args = p.parse_args()
 
     seleccion = [s for s in PASOS if args.desde <= s[0] <= args.hasta]
     if not seleccion:
         print(f"Ningún paso entre {args.desde} y {args.hasta}", file=sys.stderr)
         return 1
+
+    if args.limpiar:
+        proc = subprocess.run(
+            [sys.executable, "limpiar_proyecto.py", "--proyecto", args.proyecto, "--si"],
+            cwd=RAIZ,
+        )
+        if proc.returncode != 0:
+            print("\nLa limpieza falló. El pipeline se detiene acá.", file=sys.stderr)
+            return proc.returncode
 
     for numero, script, nombre in seleccion:
         cmd = [sys.executable, script, "--proyecto", args.proyecto]
