@@ -1,1 +1,9 @@
-Pasemos a las funciones que cumplen los bancos y a los riesgos que esas funciones generan. Hay tres tareas clave. La primera es la transformación de plazos: captar depósitos relativamente cortos y otorgar créditos de mayor vencimiento. La segunda es la transformación de montos: reunir pequeños ahorros para financiar operaciones más grandes. La tercera combina pagos e información: procesar cobros y transferencias, y usar esa experiencia para evaluar mejor los riesgos de sus clientes.
+Pasemos ahora a las funciones que cumplen los bancos.
+
+Hay tres funciones clave.
+
+La primera la mencionamos previamente, es la transformación de plazos: el banco capta depósitos a plazos relativamente cortos y otorga créditos de a plazos relativamente largos.
+
+La segunda es la transformación de montos: el banco suele reunir pequeños ahorros para luego financiar operaciones más de mayor volumen promedio.
+
+Por último, es el canal que la economía utiliza para canalizar los pagos y además reúne información que utiliza para limitar las asimetrías de información.  Procesa cobros y transferencias, y usar esa experiencia, y toda la información que reúne, para evaluar mejor los riesgos de sus clientes.

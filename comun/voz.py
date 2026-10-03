@@ -37,7 +37,7 @@ class VozEdge:
 
     nombre = "edge"
 
-    def __init__(self, voz: str = "es-AR-TomasNeural", velocidad: str = "+0%", tono: str = "+0Hz"):
+    def __init__(self, voz: str = "es-UY-ValentinaNeural", velocidad: str = "+0%", tono: str = "+0Hz"):
         self.voz = voz
         self.velocidad = velocidad
         self.tono = tono
@@ -119,7 +119,7 @@ def construir(cfg: dict, clave_openai: str | None = None) -> ProveedorVoz:
 
     if proveedor == "edge":
         return VozEdge(
-            voz=cfg.get("voz", "es-AR-TomasNeural"),
+            voz=cfg.get("voz", "es-UY-ValentinaNeural"),
             velocidad=str(cfg.get("velocidad", "+0%")),
             tono=str(cfg.get("tono", "+0Hz")),
         )

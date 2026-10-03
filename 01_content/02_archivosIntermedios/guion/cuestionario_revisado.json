@@ -1,0 +1,332 @@
+{
+  "preguntas": [
+    {
+      "nivel": "comprension",
+      "enunciado": "En una economía basada en trueque, ¿qué problema explica mejor que el intercambio se vuelva rígido cuando el comercio crece?",
+      "opciones": [
+        "Que cada parte debe querer al mismo tiempo lo que la otra ofrece, en cantidades compatibles.",
+        "Que el intercambio exige que los bienes ofrecidos tengan costos de producción similares.",
+        "Que ambas partes necesitan conservar sus bienes durante un mismo período antes de intercambiarlos.",
+        "Que hace falta un precio expresado en moneda antes de acordar cualquier intercambio de bienes."
+      ],
+      "correcta": "A",
+      "explicacion": "El video explica que el límite central del trueque es la doble coincidencia de necesidades: para intercambiar, cada parte debe desear exactamente lo que la otra ofrece al mismo tiempo y en una cantidad compatible. Esa exigencia vuelve rígido el intercambio cuando el comercio se expande.",
+      "analisis_opciones": [
+        "Correcta. Es la doble coincidencia de necesidades que limita el intercambio directo.",
+        "Incorrecta. La compatibilidad de necesidades no exige igualdad de costos de producción.",
+        "Incorrecta. La condición relevante es coincidir en lo que cada parte desea intercambiar, no en cuánto tiempo conserva sus bienes.",
+        "Incorrecta. El trueque permite acordar intercambios sin usar una moneda como unidad de cuenta."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V02",
+          "fragmento": "rápidamente presenta límites muy evidentes, sobre todo por la doble coincidencia de necesidades que debe existir"
+        },
+        {
+          "fuente": "V02",
+          "fragmento": "El trueque tiene utilidad para intercambios directos, pero se vuelve muy rígido cuando el comercio crece."
+        }
+      ]
+    },
+    {
+      "nivel": "comprension",
+      "enunciado": "¿Qué cambio convierte a una institución de custodia en un antecedente del banco comercial?",
+      "opciones": [
+        "Reemplazar el dinero fiduciario por metal precioso.",
+        "Administrar depósitos, facilitar pagos y otorgar crédito al comprobar que no todos retiran a la vez.",
+        "Empezar a acuñar monedas con valor uniforme.",
+        "Eliminar por completo la asimetría de información entre ahorristas y prestatarios."
+      ],
+      "correcta": "B",
+      "explicacion": "El paso decisivo no fue solo guardar valores, sino usar el hecho de que los depositantes no retiran todos al mismo tiempo para administrar depósitos, facilitar pagos y otorgar crédito. Ahí aparece la intermediación bancaria.",
+      "analisis_opciones": [
+        "Incorrecta. El video presenta el dinero fiduciario como una etapa posterior en la evolución del dinero, no como el origen del banco comercial.",
+        "Correcta. Describe exactamente el salto desde la custodia hacia la administración de depósitos, pagos y crédito.",
+        "Incorrecta. La acuñación de monedas pertenece a una etapa anterior de la evolución del dinero, no al surgimiento de la intermediación bancaria.",
+        "Incorrecta. El banco reduce asimetrías de información, pero no las elimina por completo ni ese es el cambio histórico que define su surgimiento."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V06",
+          "fragmento": "Al comprobar que no todos los depositantes retiraban sus fondos al mismo tiempo, pudieron administrar depósitos, facilitar pagos y otorgar crédito."
+        },
+        {
+          "fuente": "V06",
+          "fragmento": "El banco comenzó a intermediar."
+        }
+      ]
+    },
+    {
+      "nivel": "comprension",
+      "enunciado": "¿Cuál de las siguientes capacidades explica mejor por qué un banco puede tomar decisiones de crédito mejor fundadas que un ahorrista aislado?",
+      "opciones": [
+        "Analizar clientes, producir información, monitorear comportamientos y evaluar riesgos.",
+        "Ajustar las tasas al promedio del mercado, de modo que todos los clientes reciban una evaluación semejante.",
+        "Custodiar los fondos con seguridad, usando esa capacidad como indicador de la capacidad de pago de los prestatarios.",
+        "Reunir más depósitos, de modo que el volumen disponible reemplace la evaluación individual de los préstamos."
+      ],
+      "correcta": "A",
+      "explicacion": "Según el video, el banco agrega valor porque desarrolla capacidades especializadas para producir y procesar información sobre sus clientes. Eso le permite evaluar mejor los riesgos de crédito que una persona aislada.",
+      "analisis_opciones": [
+        "Correcta. Estas capacidades permiten reducir las asimetrías de información y fundamentar la decisión crediticia.",
+        "Incorrecta. Una tasa de referencia no revela por sí misma la situación ni los riesgos de cada cliente.",
+        "Incorrecta. La seguridad de la custodia no permite inferir la capacidad de pago de quien solicita crédito.",
+        "Incorrecta. Reunir fondos resuelve un problema de montos, pero no sustituye el análisis del prestatario."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V13",
+          "fragmento": "El banco, en cambio, desarrolla capacidades para analizar clientes, producir información, monitorear comportamientos y evaluar riesgos."
+        },
+        {
+          "fuente": "V13",
+          "fragmento": "para una institución especializada puede transformarse en una decisión de crédito mejor fundada"
+        }
+      ]
+    },
+    {
+      "nivel": "comprension",
+      "enunciado": "¿Qué explica mejor que un banco ofrezca servicios como pagos, tarjetas o garantías además de captar depósitos y otorgar créditos?",
+      "opciones": [
+        "Que esos servicios reemplazan a la intermediación como actividad principal.",
+        "Que esos servicios aparecen recién cuando dejan de existir depósitos y créditos.",
+        "Que la eficiencia surge solo de vender más volumen de un mismo producto.",
+        "Que el banco reutiliza información, sistemas, controles y confianza ya desarrollados para intermediar."
+      ],
+      "correcta": "D",
+      "explicacion": "El video distingue entre el núcleo de intermediación y la expansión hacia otros servicios. Esa ampliación se vuelve eficiente porque el banco puede reutilizar capacidades compartidas —información, sistemas, controles y confianza— ya creadas para su actividad principal.",
+      "analisis_opciones": [
+        "Incorrecta. El video afirma que la intermediación sigue siendo el núcleo del banco.",
+        "Incorrecta. Los servicios complementarios se apoyan en la intermediación; no aparecen cuando esta desaparece.",
+        "Incorrecta. Eso confunde economías de alcance con aumentos de volumen; el video aclara que la eficiencia no surge solo del volumen.",
+        "Correcta. Resume la lógica de capacidades compartidas y economías de alcance presentada en el video."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V22",
+          "fragmento": "La misma base de información, sistemas, controles, canales y confianza generada que sirve para intermediar también puede servir para prestar más servicios en conjunto."
+        },
+        {
+          "fuente": "V23",
+          "fragmento": "Existen economías de alcance cuando ofrecer dos servicios juntos cuesta menos que ofrecer cada uno por separado."
+        }
+      ]
+    },
+    {
+      "nivel": "razonamiento",
+      "enunciado": "Caso hipotético: cientos de hogares quieren mantener ahorros en depósitos pequeños y relativamente líquidos, mientras una cooperativa necesita un único préstamo grande a diez años para comprar maquinaria. ¿Qué aporte del banco vuelve más compatible esa situación?",
+      "opciones": [
+        "Otorgar un préstamo renovable cada mes, trasladando a la cooperativa la necesidad de conseguir nuevas renovaciones.",
+        "Conservar líquidos todos los depósitos y trasladar la obtención del préstamo a una negociación directa de la cooperativa.",
+        "Reunir depósitos pequeños y relativamente líquidos para financiar un préstamo grande de mayor plazo, administrando ese descalce.",
+        "Reunir depósitos pequeños para el préstamo, exigiendo que todos queden inmovilizados durante los diez años."
+      ],
+      "correcta": "C",
+      "explicacion": "El caso combina dos desajustes típicos: montos pequeños frente a una necesidad grande, y preferencias de liquidez de corto plazo frente a un financiamiento de largo plazo. El banco agrega valor justamente porque transforma montos y plazos, haciendo compatible lo que en una relación directa sería difícil coordinar.",
+      "analisis_opciones": [
+        "Incorrecta. No proporciona el horizonte estable de financiamiento que requiere el proyecto a diez años.",
+        "Incorrecta. Preserva liquidez, pero deja sin resolver la coordinación del financiamiento de la inversión.",
+        "Correcta. Resuelve conjuntamente el desajuste de montos y plazos, aunque crea riesgos que requieren gestión.",
+        "Incorrecta. Resuelve la diferencia de montos, pero no preserva la preferencia por liquidez de los hogares."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V14",
+          "fragmento": "Los ahorristas suelen mantener sus fondos en cantidades más pequeñas y por horizontes relativamente cortos."
+        },
+        {
+          "fuente": "V14",
+          "fragmento": "Quienes toman crédito, en cambio, suelen requerir sumas mayores y por plazos más largos."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "El banco reúne depósitos de distintos tamaños y organiza una cartera de créditos."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "El banco emite pasivos líquidos y de corto plazo, como los depósitos, y mantiene activos menos líquidos y de mayor vencimiento, como los préstamos."
+        }
+      ]
+    },
+    {
+      "nivel": "razonamiento",
+      "enunciado": "Caso hipotético: una pyme ya usa en un banco su cuenta corriente, cobra ventas y paga proveedores. Ahora necesita una garantía para cerrar un contrato comercial. ¿Por qué ese mismo banco podría ofrecerla con ventaja respecto de una institución separada que no conoce su operatoria?",
+      "opciones": [
+        "Porque al ofrecer una garantía el banco transforma el riesgo del cliente en un riesgo que asume únicamente la contraparte comercial.",
+        "Porque la información de sus pagos y la infraestructura existente pueden reducir costos y mejorar la evaluación de la garantía.",
+        "Porque la venta cruzada demuestra por sí misma que producir ambos servicios juntos cuesta menos que hacerlo por separado.",
+        "Porque la garantía permite reemplazar la evaluación del cliente por la reputación del banco que la emite."
+      ],
+      "correcta": "B",
+      "explicacion": "La cuenta y los pagos ya generan información sobre flujos y comportamiento del cliente. Si además la institución ya tiene sistemas, controles y relación operativa, puede usar esa base para ofrecer una garantía con menor costo conjunto y mejor evaluación del riesgo. Esa es la lógica de las economías de alcance.",
+      "analisis_opciones": [
+        "Incorrecta. Al otorgar la garantía el banco puede asumir compromisos propios; no traslada todo el riesgo a la contraparte.",
+        "Correcta. El caso combina información transaccional e infraestructura compartida: complementariedades entre servicios.",
+        "Incorrecta. La venta cruzada es una estrategia comercial; no prueba la existencia de economías de alcance.",
+        "Incorrecta. El respaldo del banco implica asumir una obligación y requiere evaluar al cliente."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V24",
+          "fragmento": "La información construida para evaluar clientes puede apoyar créditos, garantías o inversiones."
+        },
+        {
+          "fuente": "V28",
+          "fragmento": "Las cartas de crédito, las garantías y los avales sirven para respaldar una obligación y reducir incertidumbre entre las partes."
+        },
+        {
+          "fuente": "R01",
+          "fragmento": "Cuenta y medios de pago → información sobre flujos → mejor evaluación del riesgo → crédito o garantía más adecuados."
+        },
+        {
+          "fuente": "R01",
+          "fragmento": "La producción conjunta puede reducir costos, acortar tiempos de respuesta y mejorar la evaluación del riesgo."
+        }
+      ]
+    },
+    {
+      "nivel": "razonamiento",
+      "enunciado": "Caso hipotético: un banco mantiene una cartera de préstamos sin deterioro visible, pero una caída de sus sistemas le impide autorizar transferencias y registrar saldos durante varias horas. Comercios y clientes empiezan a dudar si los pagos se acreditarán. ¿Qué diagnóstico es más adecuado?",
+      "opciones": [
+        "El problema comienza como riesgo crediticio, porque una transferencia demorada equivale a un incumplimiento de los prestatarios.",
+        "El problema nace como riesgo de tasa de interés, porque los pagos atrasados modifican el rendimiento contractual de los créditos.",
+        "El problema nace como riesgo operacional y puede propagarse al sistema por la interrupción de pagos y la pérdida de confianza.",
+        "El problema evidencia primero insolvencia: que no se registren saldos demuestra que los activos ya no cubren los pasivos."
+      ],
+      "correcta": "C",
+      "explicacion": "La falla nace en procesos y sistemas, por lo que corresponde a un riesgo operacional. Pero como el banco está en el centro de pagos y de la confianza del público, una interrupción relevante puede propagarse y adquirir dimensión sistémica aunque la cartera crediticia no haya empeorado.",
+      "analisis_opciones": [
+        "Incorrecta. Una falla en el procesamiento de pagos no demuestra que los prestatarios hayan incumplido.",
+        "Incorrecta. El caso no describe una variación de tasas ni un descalce de repreciación como origen del problema.",
+        "Correcta. Distingue el origen operacional de sus posibles efectos sistémicos.",
+        "Incorrecta. La indisponibilidad del registro de saldos no prueba insuficiencia patrimonial, aunque puede generar desconfianza."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V17",
+          "fragmento": "Y como toda la operatoria depende de procesos y sistemas, también existe riesgo operacional."
+        },
+        {
+          "fuente": "V18",
+          "fragmento": "Pueden afectar la confianza del público, interrumpir pagos y transmitir inestabilidad al resto del sistema financiero"
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Surge de fallas en procesos, personas, sistemas o eventos externos."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "una interrupción tecnológica, un fraude o un error de procesamiento puede afectar simultáneamente los pagos, la información y la liquidez."
+        }
+      ]
+    },
+    {
+      "nivel": "razonamiento",
+      "enunciado": "Caso hipotético: un banco financió hipotecas a tasa fija y largo plazo con depósitos de corto plazo. Meses después, suben con fuerza las tasas de mercado y muchos depositantes trasladan sus fondos buscando mejor rendimiento. ¿Cuál es la consecuencia más probable para el banco?",
+      "opciones": [
+        "Aparecen necesidades de efectivo, pero el costo del fondeo permanece estable porque las hipotecas tienen tasa fija.",
+        "Aparece presión sobre el margen, pero la vigencia de los préstamos permite atender los retiros sin obtener fondos adicionales.",
+        "Aumentan los ingresos de las hipotecas al ritmo del mercado, compensando el costo de retener los depósitos.",
+        "Se combinan presión sobre el margen por el costo del fondeo y necesidades de efectivo para atender los retiros."
+      ],
+      "correcta": "D",
+      "explicacion": "El banco cobra una tasa fija en activos de largo plazo, mientras su fondeo de corto plazo se vuelve más caro o se retira. Por eso enfrenta simultáneamente riesgo de tasa de interés y riesgo de liquidez. La combinación es típica de la transformación de vencimientos.",
+      "analisis_opciones": [
+        "Incorrecta. La tasa fija de los activos no fija el costo de renovar o reemplazar los depósitos.",
+        "Incorrecta. Los préstamos vigentes no aportan inmediatamente el efectivo que exigen los retiros.",
+        "Incorrecta. Las hipotecas son a tasa fija; sus ingresos no se ajustan automáticamente a las tasas de mercado.",
+        "Correcta. Integra riesgo de tasa de interés y riesgo de liquidez derivados del descalce descrito."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V17",
+          "fragmento": "si el banco cobra créditos a tasa relativamente fija y se financia con pasivos cuyo costo cambia, surge el riesgo de tasa de interés"
+        },
+        {
+          "fuente": "V17",
+          "fragmento": "Al transformar plazos, aparece el riesgo de liquidez"
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Si concede préstamos a tasa fija por varios años y se financia con depósitos cuyo costo se ajusta rápidamente, un aumento de las tasas reduce su margen."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "los depositantes pueden trasladar sus fondos cuando cambian los incentivos"
+        }
+      ]
+    },
+    {
+      "nivel": "integracion",
+      "enunciado": "Caso hipotético: un banco que ya atiende cuentas empresariales decide ofrecer garantías y líneas de crédito comprometidas. La gerencia propone no incluir esos productos en las pruebas de liquidez porque “no son préstamos desembolsados”. ¿Cuál es la mejor evaluación?",
+      "opciones": [
+        "Basta tratarlos como riesgo de crédito, porque disponer de capital suficiente equivale a tener liquidez para atender su ejecución.",
+        "Basta proyectar el uso promedio histórico, porque compartir información con las cuentas permite descartar activaciones simultáneas.",
+        "Deben incluirse: en escenarios de tensión pueden coincidir usos de líneas y ejecución de garantías, aumentando las necesidades de fondos.",
+        "Es razonable incluirlos recién cuando se solicite el desembolso, porque antes no afectan los flujos efectivos de caja."
+      ],
+      "correcta": "C",
+      "explicacion": "La respuesta correcta requiere combinar dos aportes. Del video surge que las garantías y otros servicios se apoyan en las mismas capacidades del banco y que toda expansión debe acompañarse con gestión prudente de riesgos. Pero eso no alcanza por sí solo para resolver el caso. La lectura agrega un punto sustantivo no desarrollado por completo en el video: garantías y líneas comprometidas son compromisos contingentes, que pueden volverse exigibles o demandar desembolsos precisamente en una crisis. Por eso deben entrar en pruebas de liquidez y en la gestión integral, aunque no sean préstamos ya desembolsados.",
+      "analisis_opciones": [
+        "Incorrecta. Capital y liquidez cumplen funciones distintas; cubrir pérdidas no garantiza efectivo disponible en el momento exigido.",
+        "Incorrecta. Las capacidades compartidas no eliminan la posibilidad de uso simultáneo en una crisis; el promedio histórico puede subestimarlo.",
+        "Correcta. Integra la ampliación de servicios del video con la activación conjunta de compromisos contingentes desarrollada en la lectura.",
+        "Incorrecta. La gestión prospectiva necesita anticipar desembolsos contingentes; esperar la solicitud puede dejar necesidades de fondos sin cubrir."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V34",
+          "fragmento": "Las capacidades compartidas de información, sistemas, controles y confianza permiten extender la actividad hacia pagos y acceso, comercio y respaldo, y custodia y seguridad."
+        },
+        {
+          "fuente": "V35",
+          "fragmento": "Exige capital, regulación y una gestión prudente de los riesgos."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Las garantías, las líneas de crédito comprometidas y ciertos derivados generan obligaciones que pueden no reflejarse de inmediato como un desembolso."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Durante una crisis, numerosos clientes pueden utilizar sus líneas al mismo tiempo y varias garantías pueden hacerse exigibles."
+        }
+      ]
+    },
+    {
+      "nivel": "integracion",
+      "enunciado": "Caso hipotético: un banco concentra depósitos a la vista usados para pagos y una cartera de préstamos a pymes poco negociables, evaluados con información interna. Tras un rumor, muchos clientes intentan retirar fondos al mismo tiempo. La dirección sostiene que basta con mirar el valor contable de los préstamos para descartar un problema grave. ¿Qué juicio es más sólido?",
+      "opciones": [
+        "El juicio es suficiente mientras las pymes paguen sus cuotas: la información interna permite convertir los créditos en efectivo sin pérdidas relevantes.",
+        "El juicio es insuficiente: la opacidad y la baja liquidez dificultan realizar los activos; ventas forzadas pueden erosionar solvencia y afectar pagos y confianza.",
+        "El juicio es suficiente si los préstamos superan a los depósitos en los libros: ese excedente indica que podrán pagarse los retiros cuando se soliciten.",
+        "El juicio es insuficiente únicamente por un posible aumento de tasas: si el costo de los depósitos permanece fijo, los retiros no comprometen la continuidad."
+      ],
+      "correcta": "B",
+      "explicacion": "Aquí también hacen falta ambos materiales. El video aporta la idea de que transformar plazos crea riesgo de liquidez y que, por el papel del banco en pagos y financiamiento, una falla puede propagarse al sistema. Sin embargo, el video solo no basta para fundamentar por qué el valor contable de la cartera no resuelve el problema. La lectura agrega dos elementos decisivos: la cartera bancaria puede ser opaca para terceros y una venta forzada de activos puede transformar una dificultad de liquidez en un problema de solvencia. Por eso, aun si los préstamos parecen valiosos en los libros, la combinación de depósitos líquidos, activos poco líquidos y opacos, y función de pagos vuelve frágil a la entidad ante una corrida.",
+      "analisis_opciones": [
+        "Incorrecta. La información interna no asegura que terceros valoren o compren rápidamente créditos poco negociables sin descuentos.",
+        "Correcta. Integra opacidad, liquidez, pérdidas por ventas forzadas y propagación a través de pagos y confianza.",
+        "Incorrecta. Una diferencia contable positiva no garantiza la disponibilidad inmediata de efectivo.",
+        "Incorrecta. Una corrida puede generar problemas de liquidez incluso sin un aumento del costo contractual de los depósitos."
+      ],
+      "evidencias": [
+        {
+          "fuente": "V18",
+          "fragmento": "Pueden afectar la confianza del público, interrumpir pagos y transmitir inestabilidad al resto del sistema financiero"
+        },
+        {
+          "fuente": "V19",
+          "fragmento": "si no administra bien la liquidez, la calidad de cartera, las tasas y la operativa diaria"
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Por eso la cartera bancaria puede resultar opaca para depositantes, inversores y supervisores."
+        },
+        {
+          "fuente": "R02",
+          "fragmento": "Las pérdidas realizadas en esas ventas pueden transformar una dificultad de liquidez en un problema de solvencia."
+        }
+      ]
+    }
+  ]
+}

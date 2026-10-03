@@ -1,15 +1,15 @@
-# Configuración de ESTE video. Cada carpeta de contenido tiene la suya.
+# Configuración compartida de producción: se reutiliza con cada lección.
 # Todo lo que no esté acá toma el valor por defecto de comun/config.py.
 
 proyecto:
-  nombre: intermediacion_bancaria
-  titulo: Intermediación bancaria
+  nombre: contenido
   idioma: es-AR
 
 insumos:
   slides: 01_materialOriginal/slides
   transcripcion: 01_materialOriginal/exposicion
   fichas: 01_materialOriginal/fichas_lectura
+  bibliografia: 01_materialOriginal/material_bibliográfico
 
 salidas:
   guion: 02_archivosIntermedios/guion/guion_maestro.md
@@ -19,16 +19,19 @@ salidas:
   segmentos: 02_archivosIntermedios/video_segmentos
   video: 03_output/video_final.mp4
   qc: 03_output/qc
+  youtube: 03_output/youtube.txt
+  cuestionario: 03_output/cuestionario.txt
+  cuestionario_resuelto: 03_output/cuestionario_resuelto.txt
 
 guion:
-  modelo: gpt-5.4
+  modelo: gpt-6-astra
   esfuerzo: high
   max_output_tokens: 32000
-  duracion_objetivo_min: 18
+  duracion_objetivo_min: 22
   # Cuántos segmentos de narración pedirle como máximo a cada diapositiva.
   # Con 6 slides densas conviene subdividir para que la imagen no quede fija
   # cuatro o cinco minutos.
-  max_segmentos_por_slide: 4
+  max_segmentos_por_slide: 5
   palabras_por_segmento: 220
   # El primer segmento de cada diapositiva abre con una frase de transición
   # propia (no el título leído literal). Los sub-segmentos b, c... no la llevan.
@@ -40,17 +43,21 @@ guion:
        exposición original.
     3. No transcribir literalmente el habla: eliminar muletillas, repeticiones,
        interrupciones y frases incompletas.
-    4. No mencionar reuniones, clases, lecciones, ni contenido anterior o
-       posterior. Nada de "como vimos", "la clase pasada", "más adelante".
-    5. No interpelar al público presente ("¿saben?", "miren acá", "¿se
-       entiende?"). Nada que dependa de que alguien haya participado antes.
+    4. No depender de reuniones, clases, lecturas ni videos anteriores o
+       posteriores. Se permiten conexiones breves con lo ya explicado dentro
+       de este mismo video, cuando ayuden a seguir el razonamiento.
+    5. Invitar a razonar con "imaginemos", "supongamos" o "pensemos", sin
+       esperar respuestas. Evitar "¿se entiende?", "miren acá" y referencias
+       a participantes de la exposición original.
     6. Oraciones naturales y de extensión moderada, aptas para voz sintética.
        Evitar subordinadas encadenadas y paréntesis largos.
     7. Explicar cada sigla la primera vez que aparece, escribiéndola normal
        (LCR, no ele-ce-erre): la pronunciación se corrige después.
     8. Una unidad conceptual por segmento. El texto de cada segmento tiene que
        corresponder con lo que la diapositiva muestra en pantalla.
-    9. Evitar instrucciones visuales dentro de la locución.
+    9. Cada diapositiva abre vinculando su título o tema con la explicación,
+       incluso cuando repite el título anterior. Evitar instrucciones visuales
+       como "miren acá". Explicar las ecuaciones en palabras naturales.
     10. Registro profesional y serio, propio de un material de capacitación: en
         español rioplatense neutro, sin voseo marcado. Mantené la espontaneidad y
         el hilo natural de la exposición oral — no tiene que sonar acartonado ni
@@ -83,3 +90,21 @@ qc:
   min_seg: 5
   max_seg: 300
   capturas: 8
+
+# Texto de publicación generado a partir del guion final revisado.
+youtube:
+  modelo: gpt-5.4
+  esfuerzo: medium
+  max_output_tokens: 6000
+  reglas: ""
+
+cuestionario:
+  modelo: gpt-5.4
+  esfuerzo: high
+  max_output_tokens: 18000
+  reglas: ""
+
+drive:
+  carpeta_id: 1KVQcdWeLU2OPUJ3QhK1KilLIOJj8eGLG
+  credenciales: credentials.json
+  incluir_intermedios: true

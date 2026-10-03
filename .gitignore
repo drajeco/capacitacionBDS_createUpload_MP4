@@ -15,3 +15,8 @@ __pycache__/
 
 # Artefactos de sesión de Claude Code (no del proyecto)
 .claude/*.lock
+
+# Credenciales y autorización de Google Drive
+credentials*.json
+client_secret*.json
+.drive/

@@ -1,1 +1,7 @@
-Sobre esa base, el banco amplía servicios. Las capacidades compartidas de información, sistemas, controles y confianza permiten extender la actividad hacia pagos y acceso, comercio y respaldo, y custodia y seguridad. La lógica es la misma que vimos antes: una vez construida la infraestructura de intermediación, resulta eficiente reutilizarla en productos complementarios. Así, el banco deja de ser solo un intermediario entre depósitos y créditos y pasa a funcionar como una plataforma de servicios financieros.
+Sobre esa base, el banco amplía servicios.
+
+Las capacidades compartidas de información, sistemas, controles y confianza permiten extender la actividad hacia pagos y acceso, comercio y respaldo, y custodia y seguridad.
+
+La lógica es la misma que vimos antes: una vez construida la infraestructura de intermediación, resulta eficiente reutilizarla en productos complementarios.
+
+Así, el banco deja de ser solo un intermediario entre depósitos y créditos y pasa a funcionar como una plataforma de servicios financieros.

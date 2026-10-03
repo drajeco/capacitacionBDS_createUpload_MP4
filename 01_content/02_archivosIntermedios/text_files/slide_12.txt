@@ -1,1 +1,9 @@
-Una primera ganancia de esa intermediación es que reduce costos de transacción. Sin un banco, cada ahorrista tendría que buscar por su cuenta a un prestatario compatible, negociar condiciones, documentar el acuerdo y ocuparse del cobro. Y cada demandante debería salir a encontrar a alguien dispuesto a prestarle exactamente lo que necesita. Es un problema de coordinación. El banco evita reconstruir esa relación desde cero en cada operación y, por eso, abarata el encuentro entre ahorro y financiamiento.
+Veamos cuáles son las ventajas que tiene para la económia el hecho de que existan esas instituciones que llamamos bancos comerciales.
+
+Una primera ventaja es que la existencia de los bancos reduce costos de transacción.
+
+Imaginemos por un segundo un mundo en que no existieran los bancos.  En este mundo, cada ahorrista tendría que buscar por su cuenta a un prestatario compatible, negociar condiciones, documentar el acuerdo y ocuparse del cobro.
+
+Y cada demandante debería salir a encontrar a alguien dispuesto a prestarle exactamente lo que necesita. En este mundo hipotético en que no existen bancos, existe un problema de coordinación.
+
+Los bancos permiten conectar de manera eficiente oferentes y demandantes de fondos.

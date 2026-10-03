@@ -1,1 +1,5 @@
-Ahora nos concentraremos en algunos servicios bancarios concretos y en la infraestructura común que los sostiene. Detrás de productos muy distintos suele haber recursos compartidos: información del cliente, sistemas de pago, gestión de riesgos, cumplimiento normativo y confianza. Esa base es importante porque explica por qué un banco puede operar en varias áreas sin empezar desde cero cada vez. Los productos cambian, pero muchos de los datos, controles y procesos que necesitan son los mismos.
+Ahora nos concentraremos en algunos servicios bancarios concretos y en la infraestructura común que los sostiene.
+
+Detrás de productos muy distintos suele haber recursos compartidos: información del cliente, sistemas de pago, gestión de riesgos, cumplimiento normativo y confianza. Esa base es importante porque explica por qué un banco puede operar en varias áreas sin empezar desde cero cada vez.
+
+Los productos cambian, pero muchos de los datos, controles y procesos que necesitan son los mismos.

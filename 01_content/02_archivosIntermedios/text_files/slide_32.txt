@@ -1,1 +1,5 @@
-Pero conectar no alcanza. El banco también transforma y gestiona. Toma recursos con ciertos plazos y los coloca con otros plazos. Agrupa muchos montos pequeños para financiar montos mayores. Y, además, procesa pagos y produce información útil para evaluar mejor a sus clientes. Esas funciones son el corazón técnico del negocio bancario. Sin esa capacidad de transformación, el encuentro directo entre ahorristas y prestatarios seguiría siendo demasiado limitado y costoso.
+Pero conectar no alcanza. El banco también transforma y gestiona. Toma recursos a ciertos plazos (en general, a corto plazo) y los coloca a plazos mayores. Agrupa muchos montos pequeños, y financia montos que en promedio suelen ser mayores.
+
+Y, además, procesa pagos y produce información útil para evaluar mejor a sus clientes.
+
+Esas funciones son el corazón técnico del negocio bancario. Sin esa capacidad de transformación, el encuentro directo entre ahorristas y prestatarios seguiría siendo demasiado limitado y costoso.

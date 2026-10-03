@@ -76,7 +76,7 @@ def main() -> int:
     if not clave:
         avisos.append(
             "no hay OPENAI_API_KEY (ni en el entorno ni en .env). "
-            "Solo queda bloqueado el paso 02; el resto funciona igual."
+            "Quedan bloqueados los pasos 02, 07 y 08; el resto funciona igual."
         )
     else:
         modelo = proy.guion_cfg["modelo"]

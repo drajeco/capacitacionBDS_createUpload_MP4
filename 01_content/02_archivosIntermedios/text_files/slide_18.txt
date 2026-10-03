@@ -1,1 +1,5 @@
-A esos riesgos se suma uno especialmente importante: el riesgo sistémico. Los problemas de una entidad no quedan encerrados dentro de ella. Pueden afectar la confianza del público, interrumpir pagos y transmitir inestabilidad al resto del sistema financiero y a la economía real. Justamente porque los bancos están en el centro de los cobros, los pagos y el financiamiento, una falla relevante puede propagarse más allá de los clientes directamente involucrados.
+A esos riesgos se suma uno especialmente importante: el riesgo sistémico.
+
+Los problemas de una entidad no quedan encerrados dentro de ella.
+
+Pueden afectar la confianza del público, interrumpir pagos y transmitir inestabilidad al resto del sistema financiero y, a través de él, a la economía real. Justamente porque los bancos están en el centro del sistema de pagos y del financiamiento, una falla relevante puede propagarse más allá de los clientes directamente involucrados.

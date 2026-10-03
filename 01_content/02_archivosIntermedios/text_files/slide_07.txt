@@ -1,1 +1,3 @@
-En la etapa más reciente, el dinero pasó a ser cada vez menos una mercancía y cada vez más una promesa respaldada por confianza, regulación e infraestructura. Eso es el dinero fiduciario, y hoy convive con formas digitales que permiten operar a gran escala, con más velocidad y a distancia. Su valor ya no depende del metal que contienen, sino de que exista un sistema confiable para aceptar pagos, registrar saldos y hacer cumplir las reglas.
+En una etapa más reciente, el dinero pasó a ser cada vez menos una mercancía y cada vez más una promesa respaldada por la costumbre, la confianza, la regulación y la infraestructura. Eso es lo que conocemos como dinero fiduciario, que hoy convive con formas digitales que permiten operar a gran escala, con más velocidad y a distancia.
+
+Su valor ya no depende del metal que contienen ni de alguna utilidad intrínseca, sino de que exista un sistema confiable para aceptar pagos, registrar saldos y hacer cumplir las reglas.

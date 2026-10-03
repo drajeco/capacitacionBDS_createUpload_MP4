@@ -1,1 +1,7 @@
-Ahora bien, cada una de esas funciones trae riesgos asociados. Cuando hay créditos, existe riesgo de incumplimiento. Cuando se transforman plazos, existe riesgo de liquidez. Cuando cambian las condiciones del mercado, aparece el riesgo de tasa de interés. Y como la operatoria depende de procesos, personas y tecnología, también hay riesgo operacional. Además, la interconexión puede convertir un problema individual en riesgo sistémico. Por eso gestionar bien un banco implica crear valor y, al mismo tiempo, contener fragilidades.
+Ahora bien, cada una de esas funciones tiene riesgos asociados.
+Cuando hay créditos, existe riesgo de incumplimiento.
+Cuando se transforman plazos, existe riesgo de liquidez.
+Cuando cambian las condiciones del mercado, aparece el riesgo de tasa de interés.
+Y como la operatoria depende de procesos, personas y tecnología, también hay riesgo operacional.
+Además, la interconexión puede convertir un problema individual en riesgo sistémico.
+Por eso la intermediación implica crear valor.  Pero, al mismo tiempo, intrínsecamente genera riesgos, que el banco debe gestionar.

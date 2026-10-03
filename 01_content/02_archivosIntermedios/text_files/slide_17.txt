@@ -1,1 +1,9 @@
-Esas funciones crean valor, pero también abren riesgos. Al prestar, aparece el riesgo de crédito: el deudor puede no pagar. Al transformar plazos, aparece el riesgo de liquidez: los depositantes pueden querer retirar antes de que los préstamos venzan. Si el banco cobra créditos a tasa relativamente fija y se financia con pasivos cuyo costo cambia, surge el riesgo de tasa de interés. Y como toda la operatoria depende de procesos y sistemas, también existe riesgo operacional.
+Esas funciones crean valor, pero al mismo tiempo genera riesgos.
+
+Al prestar fondos, aparece el riesgo de crédito: el deudor puede no pagar los fondos que recibió en forma y plazo pactados originalmente.
+
+Al transformar plazos, aparece el riesgo de liquidez: los depositantes pueden querer retirar sus fondos antes de que los préstamos venzan.
+
+Por otro lado , si el banco cobra créditos a tasa relativamente fija y se financia con pasivos cuyo costo cambia, surge el riesgo de tasa de interés.
+
+Y como toda la operatoria depende de procesos y sistemas, también existe riesgo operacional.

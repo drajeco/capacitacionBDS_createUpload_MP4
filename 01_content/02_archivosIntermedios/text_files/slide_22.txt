@@ -1,1 +1,3 @@
-Esa reutilización es lo que aquí llamamos capacidades compartidas. La misma base de información, sistemas, controles, canales y confianza que sirve para intermediar también puede servir para prestar más servicios en conjunto. No hace falta construir una institución nueva para cada necesidad financiera del cliente. Una plataforma operativa ya instalada puede extenderse hacia otros productos y aprovechar mejor recursos que el banco ya desarrolló para su actividad principal.
+Esa reutilización es lo que aquí llamamos capacidades compartidas. La misma base de información, sistemas, controles, canales y confianza generada que sirve para intermediar también puede servir para prestar más servicios en conjunto.
+
+No hace falta construir una institución nueva para cada necesidad financiera del cliente. Una plataforma operativa ya instalada puede extenderse hacia otros productos y aprovechar mejor recursos que el banco ya desarrolló para su actividad principal.
