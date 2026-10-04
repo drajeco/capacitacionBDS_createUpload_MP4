@@ -33,7 +33,11 @@ def main() -> int:
     p.add_argument("--leccion", type=int, help="número para el archivo en Drive")
     p.add_argument("--titulo-leccion", help="título para el archivo en Drive")
     p.add_argument("--conservar-local", action="store_true", help="archiva sin vaciar el contenido local")
+    p.add_argument("--subir-youtube", action="store_true", help="sube en privado ANTES de archivar en Drive")
+    p.add_argument("--canal-id", help="canal destino de YouTube")
     args = p.parse_args()
+    if args.subir_youtube and not args.canal_id:
+        p.error("--subir-youtube requiere --canal-id")
 
     for numero, script, nombre in PASOS:
         cmd = [sys.executable, script, "--proyecto", args.proyecto]
@@ -42,6 +46,12 @@ def main() -> int:
         proc = subprocess.run(cmd, cwd=RAIZ)
         if proc.returncode != 0:
             print(f"\nEl paso {numero} ({nombre}) falló. El pipeline se detiene acá.", file=sys.stderr)
+            return proc.returncode
+
+    if args.subir_youtube:
+        proc = subprocess.run([sys.executable, "10_subir_youtube.py", "--proyecto", args.proyecto,
+                               "--canal-id", args.canal_id], cwd=RAIZ)
+        if proc.returncode != 0:
             return proc.returncode
 
     if args.archivar_drive:

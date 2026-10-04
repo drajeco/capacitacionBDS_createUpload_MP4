@@ -6,7 +6,7 @@ manual del guion. Esta guía no ejecuta nada por sí sola.
 
 Para retomar una sesión, leer primero [CONTINUIDAD_PROYECTO.md](CONTINUIDAD_PROYECTO.md).
 Estado al 3 de octubre de 2026: Astra configurado para el guion; Drive conectado;
-YouTube automático pendiente. No se vació el contenido real en las últimas modificaciones.
+subida privada a YouTube implementada; OAuth conectado al canal Capacitacion BDS. No se vació el contenido real en las últimas modificaciones.
 
 ## Entrar al proyecto
 
@@ -392,31 +392,75 @@ si falta esta última, ejecutar el paso 07. La autorización puede
 requerir elegir la cuenta en el navegador. Las cuentas de servicio solo se
 admiten para unidades compartidas.
 
-## Subida automática a YouTube: pendiente
+## Subida privada a YouTube por API
 
-Todavía no hay un script ni un comando de subida a YouTube. El paso 07 solo
-prepara archivos locales. La integración por YouTube Data API v3 se conversó,
-pero no se implementó ni se autorizó un canal.
+`10_subir_youtube.py` usa `client_secret_yt.json` (OAuth de escritorio) y guarda
+su token separado en `.youtube/token.json`, excluido de Git. Solicita permisos
+para subir y consultar el canal. Habilitar YouTube Data API v3 en Google Cloud;
+si el consentimiento está en pruebas, agregar la cuenta como usuario de prueba.
 
-Plan para continuar:
+Conectar y consultar el canal, sin subir ni borrar:
 
-1. Habilitar YouTube Data API v3 en Google Cloud y autorizar el canal por OAuth.
-   El cliente OAuth de `credentials.json` se puede reutilizar; el permiso de
-   Drive no autoriza YouTube. Guardar su token separado y excluirlo de Git.
-2. Subir MP4, título, descripción y miniatura; guardar el ID y enlace fuera del
-   área que se vacía y evitar repetir una carga que ya terminó.
-3. Ejecutar el archivo en Drive incluyendo el enlace de YouTube.
-4. Vaciar los contenedores solo cuando ambas operaciones hayan sido verificadas.
+```bash
+/opt/miniconda3/bin/python3 10_subir_youtube.py --comprobar
+```
 
-**El orden actual aún no incluye YouTube.** No agregar una subida después del
-paso 09 sin cambiar el flujo: el video local ya podría haberse borrado.
-Mientras se prepara la integración, `--conservar-local` permite archivar en Drive
-conservando el video para publicarlo manualmente o probar la futura subida.
+Preparar la miniatura y simular sin conectar:
 
-Google restringe a privado las subidas mediante proyectos API no auditados creados
-después del 28 de julio de 2020. Levantar esa restricción requiere una auditoría
-del proyecto API; no se resuelve solo con el consentimiento OAuth. Revisar la
-[documentación de videos.insert](https://developers.google.com/youtube/v3/docs/videos/insert)
-al implementar. La carga privada es el punto de partida propuesto; falta definir
-el canal y la visibilidad deseada. Ver también la
-[guía oficial de carga](https://developers.google.com/youtube/v3/guides/uploading_a_video).
+```bash
+/opt/miniconda3/bin/python3 07_preparar_youtube.py --proyecto 01_content
+/opt/miniconda3/bin/python3 10_subir_youtube.py --proyecto 01_content --simular
+```
+
+Subir el video existente en **privado**, reemplazando `ID_DEL_CANAL` por el ID
+obtenido con `--comprobar`:
+
+```bash
+/opt/miniconda3/bin/python3 10_subir_youtube.py --proyecto 01_content --canal-id ID_DEL_CANAL
+```
+
+La subida usa `video_final.mp4`, `youtube.txt` y `miniatura.png`. Declara categoría
+Educación y contenido no dirigido a niños, adecuado al material actual de formación
+bancaria para adultos. Si cambia la audiencia prevista, revisar esa declaración.
+No hace público el video ni cambia posteriormente su visibilidad.
+
+El registro `historial_youtube/CANAL_SHA256.json` guarda el ID fuera del área que
+se vacía; `03_output/youtube_subida.json` copia el resultado verificado para Drive.
+Repetir el comando reutiliza ese video y completa la miniatura o verificación
+pendientes; no actualiza el título o descripción de una carga ya existente.
+No borrar el historial: evita duplicados. Los `.lock` solo coordinan procesos locales.
+
+Si el proceso se interrumpe sin registrar el ID, bloquea una nueva inserción.
+Revisar YouTube Studio. Si se identifica el video exacto, recuperar explícitamente:
+
+```bash
+/opt/miniconda3/bin/python3 10_subir_youtube.py --proyecto 01_content --canal-id ID_DEL_CANAL --recuperar-id ID_DEL_VIDEO
+```
+
+La recuperación verifica el canal, pero requiere identificar manualmente que es
+el mismo video. Si no existe, revisar el caso antes de retirar el registro pendiente;
+no reintentar a ciegas. La carga por bloques reintenta durante la ejecución, no
+reanuda automáticamente una sesión de bytes después de cerrar el proceso.
+
+El script espera hasta dos minutos al procesamiento. Si demora más, conserva
+el ID, devuelve error y se puede repetir sin duplicar. Un fallo de miniatura
+(por ejemplo, canal sin habilitación) también conserva el ID y detiene el flujo.
+
+### Integrar con el pipeline y Drive
+
+Aunque el archivo se llame 10, se ejecuta **antes del 09** cuando se activan ambas
+opciones. El orden es 03–08 → 10 YouTube → 09 Drive → limpieza. Si YouTube falla,
+no se ejecuta Drive. El 09 independiente sigue funcionando como archivo de Drive,
+sin exigir una carga a YouTube.
+
+```bash
+/opt/miniconda3/bin/python3 correr_pipeline_video.py --proyecto 01_content --subir-youtube --canal-id ID_DEL_CANAL --archivar-drive --leccion 1 --conservar-local
+```
+
+Este ejemplo conserva los archivos locales. Omitir `--conservar-local` solo cuando
+se quiera vaciar los contenedores después de verificar el archivo en Drive.
+No se debe ejecutar un 09 con limpieza antes de la subida a YouTube.
+
+Google restringe a privado las subidas de proyectos API no auditados creados después
+del 28/07/2020. Levantar esa restricción exige auditoría y no solo consentimiento
+OAuth. [Documentación oficial](https://developers.google.com/youtube/v3/docs/videos/insert).

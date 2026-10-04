@@ -1,6 +1,6 @@
 # Continuidad del proyecto mp4_creation
 
-Actualizado: **3 de octubre de 2026**. Este es el archivo de entrada para una
+Actualizado: **4 de octubre de 2026**. Este es el archivo de entrada para una
 nueva sesión. Describe decisiones y estado comprobado, no autoriza por sí mismo
 subidas, borrados ni regeneraciones. Leer luego `README.md`,
 `INSTRUCCIONES_TERMINAL.md` y el código pertinente; si el estado del disco cambió,
@@ -47,8 +47,9 @@ Google Drive mediante API y reutilizar las mismas carpetas locales.
 `--archivar-drive` agrega el 09. Ambos se detienen ante errores.
 El antiguo `correr_pipeline.py` fue eliminado y reemplazado por estos dos scripts.
 
-La subida automática a YouTube **NO está implementada**. No existe aún un paso
-10 ni una opción `--subir-youtube`. El paso 07 no publica nada.
+La subida privada a YouTube está implementada en `10_subir_youtube.py`, con
+`--subir-youtube` en el pipeline. Se ejecuta ANTES del 09. El paso 07 solo prepara
+archivos. Ver actualización del 4 de octubre al final para el estado real de conexión.
 
 ## Calidad y generación de texto
 
@@ -152,7 +153,7 @@ video, publicación y cuestionarios. No se regeneraron ni borraron en esta tarea
 
 - Existe el inventario antiguo `01_content/03_output/drive_inventario.json`.
 - Aún no existe `historial_drive/`: lo creará una carga con el script nuevo.
-- Aún no existe `01_content/03_output/miniatura.png`. La antigua miniatura de
+- Al cierre del 3 de octubre no existía `01_content/03_output/miniatura.png`. La antigua miniatura de
   Intermediación bancaria está en la raíz, pero el código actual ya no la usa.
 - Para preparar la miniatura nueva basta ejecutar el paso 07: si ya existe
   `youtube.txt`, lo conserva y copia la primera diapositiva sin llamar al modelo.
@@ -220,3 +221,67 @@ Referencia histórica previa: sesión Claude Code del 14/09/2026:
 https://claude.ai/code/session_01F93nGB8Ry8AxuWQi92ixRH
 Este documento y el estado actual del código sustituyen ese enlace como punto
 principal de continuidad.
+
+
+## Actualización del 4 de octubre: integración YouTube
+
+El usuario creó `client_secret_yt.json` y pidió continuar con la subida. Se verificó
+sin mostrar secretos: es cliente OAuth de escritorio y está excluido de Git.
+Se creó `comun/youtube_api.py`, que usa un token separado `.youtube/token.json`.
+La autorización real venció con `WSGITimeoutError` sin recibir consentimiento.
+Todavía no se verificó el canal ni se subió el video. Se pidió al usuario su canal
+y está pendiente la respuesta. Repetir `10_subir_youtube.py --comprobar` para abrir
+nuevamente el navegador; no confundir código probado con subida completa.
+
+Implementado y probado con servicios simulados:
+
+- `10_subir_youtube.py`: comprobación del canal, simulación, subida privada,
+  miniatura y verificación del procesamiento, con registro persistente por canal
+  y hash del MP4 en `historial_youtube/`.
+- Una carga interrumpida con resultado incierto bloquea nuevas inserciones.
+  `--recuperar-id` permite asociar el video previamente revisado en Studio.
+- `--canal-id` obligatorio para subir: se compara con el canal autenticado.
+- El pipeline acepta `--subir-youtube` y ejecuta 10 ANTES de 09; un fallo de YouTube
+  impide el archivo y limpieza posterior. La prueba actual conserva el contenido.
+- Se ejecutó 07 sin `--forzar`: creó `03_output/miniatura.png` a partir del primer
+  slide y conservó `youtube.txt`, sin generación OpenAI. Simulación de subida OK:
+  video de 66,7 MB, título «Intermediación bancaria: ahorro, crédito y gestión del riesgo».
+- La API recibe categoría Educación, audiencia no infantil y visibilidad privada.
+  No hay publicación pública ni programación de fecha implementadas.
+- No se ejecutó el paso 09 ni se borraron archivos durante esta integración.
+
+El commit previo es `83f1655` en `main`. El usuario pidió push, pero no había
+remoto configurado; no se realizó. Las modificaciones de YouTube son posteriores
+a ese commit. Los comandos actuales están en `INSTRUCCIONES_TERMINAL.md`.
+
+Validación del 4 de octubre: **76 pruebas pasaron**. No se verificó aún si Google
+Cloud tiene la API habilitada ni si el canal permite miniaturas personalizadas;
+se podrá comprobar después del consentimiento OAuth.
+
+
+### Reintento de autorización y primera subida real (4 de octubre)
+
+Se amplió la espera OAuth de 180 a 600 segundos y el usuario completó la autorización.
+Canal verificado: **Capacitacion BDS**, ID `UCSp1NB3m20yNM88paRKvKww`.
+Se subió el MP4 de Intermediación bancaria, con título y descripción existentes,
+en privado. YouTube aceptó también la miniatura.
+
+Video: https://youtu.be/0ZE_S4UVh7c
+ID: `0ZE_S4UVh7c`. El registro persistente está en `historial_youtube/`.
+La primera espera de procesamiento venció; se reintentó la verificación con el
+mismo ID, sin duplicar la subida. También venció la segunda espera: estado al
+cierre `procesando`. La subida y miniatura están completas; falta verificar
+procesamiento. Aún no se creó `03_output/youtube_subida.json`, que se escribe
+cuando la verificación termina. Repetir el paso 10 con el canal indicado para
+consultar el mismo video. Consultar el registro para el estado más reciente.
+No se ejecutó el archivado en Drive ni se vació contenido local.
+
+
+### Verificación final de YouTube (4 de octubre)
+
+YouTube terminó de procesar el video `0ZE_S4UVh7c`. Estado final **verificado**,
+visibilidad **private**, canal **Capacitacion BDS**. Se creó
+`01_content/03_output/youtube_subida.json` con ID y enlace, y se actualizó el
+registro en `historial_youtube/`. Esta comprobación reemplaza el estado pendiente
+de las esperas anteriores. No se duplicó el video ni se ejecutó Drive o limpieza.
+Enlace: https://youtu.be/0ZE_S4UVh7c
